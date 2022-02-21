@@ -5,7 +5,7 @@ while ($line = fgets($txt_file)) {echo(" ". $line)."<br>";
 }
 fclose($txt_file);
 echo "<br>";
-echo "<h1>PDF FILE</h1><br>";
+/*echo "<h1>PDF FILE</h1><br>";*/
   $file = 'hellopdf.pdf'; 
   @readfile($file); 
   echo "<h1>EXCEL FILE</h1><br>";
@@ -67,19 +67,20 @@ function parseWord($userDoc)
     $lines = explode(chr(0x0D),$line);
     $outtext = "";
     foreach($lines as $thisline)
-      {
+    {
         $pos = strpos($thisline, chr(0x00));
         if (($pos !== FALSE)||(strlen($thisline)==0))
-          {
-          } else {
+        {
+
+        } else {
             $outtext .= $thisline." ";
-          }
-      }
-     $outtext = preg_replace("/[^a-zA-Z0-9\s\,\.\-\n\r\t@\/\_\(\)]/","",$outtext);
+        }
+    }
+    $outtext = preg_replace("/[^a-zA-Z0-9\s\,\.\-\n\r\t@\/\_\(\)]/","",$outtext);
     return $outtext;
 } 
 
-$userDoc = "hellodocx.docx";
+$userDoc = "hellodoc.doc";
 
 $text = parseWord($userDoc);
 echo $text;
