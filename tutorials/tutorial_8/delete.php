@@ -1,15 +1,22 @@
-<?php
-include 'connect.php';
-if(isset($_GET['deleted'])) {
-    $id = $_GET['deleted'];
+<?php 
+include "config.php";
 
-    $sql = "delete from `crud` where id = $id";
-    $result = mysqli_query($con,$sql);
-    if($result) {
-        //echo "Deleted successfully";//
-        header('location:display.php');
-    } else {
-        die(mysqli_error($con));
-    }
+
+if (isset($_GET['id'])) {
+	$user_id = $_GET['id'];
+
+	
+	$sql = "DELETE FROM `users` WHERE `id`='$user_id'";
+
+	
+
+	$result = $conn->query($sql);
+
+	if ($result == TRUE) {
+		echo "Record deleted successfully.";
+	}else{
+		echo "Error:" . $sql . "<br>" . $conn->error;
+	}
 }
+
 ?>

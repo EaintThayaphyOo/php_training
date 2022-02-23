@@ -52,3 +52,11 @@ form {
   border: none;
   border-radius: 5px;
 }
+
+a.btn-info, a.btn-danger {
+  text-decoration: none;
+}
+
+a.btn-danger {
+  background: #990000;
+}
