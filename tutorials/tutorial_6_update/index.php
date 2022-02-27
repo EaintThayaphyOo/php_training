@@ -11,8 +11,8 @@
 <body>
     <h3>File Store</h3>
     <form method="Post" enctype="multipart/form-data">
-        <input type="file" name="profile" accept="image/x-png, image/gif, image/jpeg"=><br><br><br>
-        <input type="text" name="folder"><br><br><br>
+        <label><input type="file" name="profile" accept="image/x-png, image/gif, image/jpeg"=><label><br><br><br>
+        <label><input type="text" name="folder"><label><br><br><br>
         <input type="submit" name="btn" value="Save">
     </form>
     <?php
