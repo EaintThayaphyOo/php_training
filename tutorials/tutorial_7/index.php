@@ -9,8 +9,8 @@
 <body>
     <div id="wrapper">
         <form method="post" action="">
-            Name<input type="text" name="qr_text"><br><br><br>
-            Folder<input type="text" name="folder"><br><br><br>
+            <label>Name<input type="text" name="qr_text"><label><br><br><br>
+            <label>Folder<input type="text" name="folder"><label><br><br><br>
             <input type="submit" name="generate_text" value="Generate">
         </form>
     </div>
